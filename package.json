@@ -1,0 +1,41 @@
+{
+  "name": "@sitemachine/puck-static-assets",
+  "module": "src/index.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "dev": "vite playground",
+    "check": "tsc --noEmit",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "prettier": "^3.6.2",
+    "tsdown": "^0.16.6",
+    "vite": "^7.2.4"
+  },
+  "peerDependencies": {
+    "@measured/puck": "^0.20.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "typescript": "^5"
+  },
+  "type": "module",
+  "dependencies": {
+    "@chakra-ui/react": "^3.29.0",
+    "@emotion/react": "^11.14.0",
+    "@tanstack/react-query": "^5.90.10",
+    "dexie": "^4.2.1",
+    "mime-matcher": "^1.0.5",
+    "next-themes": "^0.4.6",
+    "react-icons": "^5.5.0",
+    "usehooks-ts": "^3.1.1"
+  }
+}
