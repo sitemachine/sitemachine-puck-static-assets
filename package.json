@@ -1,5 +1,6 @@
 {
   "name": "@sitemachine/puck-static-assets",
+  "version": "1.0.0",
   "module": "./dist/index.js",
   "publishConfig": {
     "access": "public"
