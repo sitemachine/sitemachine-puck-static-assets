@@ -5,8 +5,7 @@ A plugin for [Puck](https://github.com/puckeditor/puck) that adds support for ma
 ## Installation
 
 ```bash
-npm install @measured/puck
-npm install @sitemachine/puck-static-assets
+npm install @sitemachine/puck-static-assets @measured/puck
 ```
 
 ## Usage

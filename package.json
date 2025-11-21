@@ -1,20 +1,46 @@
 {
   "name": "@sitemachine/puck-static-assets",
   "version": "1.0.1",
+  "description": "Static assets management plugin for Puck editor with upload, storage, and file management capabilities",
+  "keywords": [
+    "puck",
+    "static-assets",
+    "file-upload",
+    "asset-management",
+    "react",
+    "chakra-ui"
+  ],
+  "author": "Sitemachine",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
   "module": "./dist/index.js",
-  "publishConfig": {
-    "access": "public"
-  },
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": "./dist/index.js",
     "./package.json": "./package.json"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
   "scripts": {
     "dev": "vite playground",
     "build": "tsdown",
+    "build:clean": "rm -rf dist && bun run build",
     "check": "tsc --noEmit",
     "format": "prettier --write .",
-    "prepublishOnly": "bun run build"
+    "format:check": "prettier --check .",
+    "prepack": "bun run build",
+    "prepublishOnly": "bun run check && bun run format:check && bun run build"
   },
   "devDependencies": {
     "@types/bun": "latest",
@@ -31,7 +57,6 @@
     "react-dom": "^19.2.0",
     "typescript": "^5"
   },
-  "type": "module",
   "dependencies": {
     "@chakra-ui/react": "^3.29.0",
     "@emotion/react": "^11.14.0",
@@ -42,8 +67,6 @@
     "react-icons": "^5.5.0",
     "usehooks-ts": "^3.1.1"
   },
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/sitemachine/sitemachine-puck-static-assets.git"
