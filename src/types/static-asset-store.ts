@@ -18,20 +18,20 @@ export interface StaticAssetStore {
   ) => Promise<StaticAsset> | StaticAsset;
 }
 
-interface FindStaticAssetOptions {
+export interface FindStaticAssetOptions {
   id: string;
 }
 
-interface ListStaticAssetsOptions { }
+export interface ListStaticAssetsOptions { }
 
-interface CreateStaticAssetOptions {
+export interface CreateStaticAssetOptions {
   data: {
     file: File;
     name?: string;
   };
 }
 
-interface UpdateStaticAssetOptions {
+export interface UpdateStaticAssetOptions {
   id: string;
   data: {
     file?: File;
@@ -39,6 +39,6 @@ interface UpdateStaticAssetOptions {
   };
 }
 
-interface DeleteStaticAssetOptions {
+export interface DeleteStaticAssetOptions {
   id: string;
 }
