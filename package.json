@@ -1,6 +1,6 @@
 {
   "name": "@sitemachine/puck-static-assets",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Static assets management plugin for Puck editor with upload, storage, and file management capabilities",
   "keywords": [
     "puck",
@@ -10,7 +10,7 @@
     "react",
     "chakra-ui"
   ],
-  "author": "Sitemachine",
+  "author": "eyueldk",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
@@ -21,7 +21,7 @@
     "./package.json": "./package.json"
   },
   "files": [
-    "dist",
+    "./dist",
     "README.md",
     "LICENSE"
   ],

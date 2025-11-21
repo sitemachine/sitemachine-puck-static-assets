@@ -19,6 +19,7 @@ export function StaticAssetsDialog({
   const [highlightedId, setHighlightedId] = useState<string | null>(null);
   return (
     <Dialog.Root
+      id="static-assets-dialog"
       size={{ mdDown: "full", md: "cover" }}
       placement="center"
       open={isOpen}

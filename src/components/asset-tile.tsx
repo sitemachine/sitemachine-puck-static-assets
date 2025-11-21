@@ -1,19 +1,42 @@
-import { AspectRatio, Box, IconButton, Image, Menu, Text, Button, DownloadTrigger } from "@chakra-ui/react";
-import { LuFile, LuEllipsisVertical, LuTrash, LuDownload } from "react-icons/lu";
+import {
+  AspectRatio,
+  Box,
+  IconButton,
+  Image,
+  Menu,
+  Text,
+  Button,
+  DownloadTrigger,
+} from "@chakra-ui/react";
+import {
+  LuFile,
+  LuEllipsisVertical,
+  LuTrash,
+  LuDownload,
+} from "react-icons/lu";
 import type { StaticAsset } from "../types/static-asset";
 import { isImageMimeType } from "../utils/mime-type-utils";
 import { useMemo } from "react";
 
-
 function formatBytes(bytes: number): string {
-  if (bytes === 0) return '0 B';
+  if (bytes === 0) return "0 B";
   const k = 1024;
-  const sizes = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB'];
+  const sizes = ["B", "KB", "MB", "GB", "TB", "PB", "EB"];
   const i = Math.floor(Math.log(bytes) / Math.log(k));
   return `${(bytes / Math.pow(k, i)).toFixed(2)} ${sizes[i]}`;
 }
 
-export function AssetTile({ asset, isActive, onSelect, onDelete }: { asset: StaticAsset; isActive: boolean; onSelect: () => void; onDelete: () => void }) {
+export function AssetTile({
+  asset,
+  isActive,
+  onSelect,
+  onDelete,
+}: {
+  asset: StaticAsset;
+  isActive: boolean;
+  onSelect: () => void;
+  onDelete: () => void;
+}) {
   const isImage = useMemo(() => {
     return isImageMimeType(asset.mimeType);
   }, [asset.mimeType]);
@@ -64,7 +87,11 @@ export function AssetTile({ asset, isActive, onSelect, onDelete }: { asset: Stat
       </Box>
       <AspectRatio ratio={4 / 3}>
         {isImage && asset.url ? (
-          <Image src={asset.url} alt={asset.name ?? "Asset preview"} objectFit="cover" />
+          <Image
+            src={asset.url}
+            alt={asset.name ?? "Asset preview"}
+            objectFit="cover"
+          />
         ) : (
           <Box
             display="flex"
@@ -121,4 +148,3 @@ function DeleteMenuItem({ onDelete }: { onDelete: () => void }) {
     </Menu.Item>
   );
 }
-

@@ -22,7 +22,7 @@ export interface FindStaticAssetOptions {
   id: string;
 }
 
-export interface ListStaticAssetsOptions { }
+export interface ListStaticAssetsOptions {}
 
 export interface CreateStaticAssetOptions {
   data: {

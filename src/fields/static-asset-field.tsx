@@ -15,9 +15,9 @@ import { StaticAssetsDialog } from "../components/static-asset-dialog";
 import { useGetStaticAsset } from "../hooks/use-get-static-asset";
 
 export function createStaticAssetField(options: {
-  label?: string,
-  labelIcon?: ReactNode,
-  accept?: string[],
+  label?: string;
+  labelIcon?: ReactNode;
+  accept?: string[];
 }) {
   return {
     type: "custom",

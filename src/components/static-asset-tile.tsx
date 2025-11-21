@@ -41,11 +41,11 @@ export function StaticAssetTile({
   onDeleted?: (id: string) => void;
 }) {
   const deleteMutation = useDeleteStaticAsset();
-  
+
   const isImage = useMemo(() => {
     return isImageMimeType(asset.mimeType);
   }, [asset.mimeType]);
-  
+
   return (
     <Box
       borderWidth={2}
@@ -59,7 +59,6 @@ export function StaticAssetTile({
       boxShadow={isActive ? "outline" : undefined}
       _hover={{ borderColor: "blue.500" }}
       position="relative"
-            
     >
       <Box
         position="absolute"

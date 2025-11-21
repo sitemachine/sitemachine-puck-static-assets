@@ -81,15 +81,11 @@ import { RenderWithStaticAssets } from "@sitemachine/puck-static-assets";
 const store = createLocalAssetStore();
 const assets = await store.listAssets();
 const assetMap = Object.fromEntries(
-  assets.map((asset) => [asset.id, asset.url])
+  assets.map((asset) => [asset.id, asset.url]),
 );
 
 // Render with assets
-<RenderWithStaticAssets 
-  data={data} 
-  config={config} 
-  assets={assetMap} 
-/>
+<RenderWithStaticAssets data={data} config={config} assets={assetMap} />;
 ```
 
 ## Custom Store Example

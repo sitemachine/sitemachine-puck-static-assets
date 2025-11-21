@@ -26,7 +26,12 @@ export function StaticAssetUploadTile({
   };
 
   return (
-    <FileUploadRoot maxFiles={1} onFileAccept={handleFileAccept} h="full" accept={accept}>
+    <FileUploadRoot
+      maxFiles={1}
+      onFileAccept={handleFileAccept}
+      h="full"
+      accept={accept}
+    >
       <FileUploadTrigger asChild>
         <Box
           as="button"

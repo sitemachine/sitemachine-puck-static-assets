@@ -5,7 +5,10 @@ export { createStaticAssetPlugin } from "./plugins/static-asset-plugin";
 export { createLocalAssetStore } from "./stores/local-static-asset-store";
 export { useStaticAssetUrl } from "./hooks/use-static-asset-url";
 export { useStaticAssetMap } from "./contexts/static-asset-map-context";
-export { useStaticAssetStore, StaticAssetStoreProvider } from "./contexts/static-asset-store-context";
+export {
+  useStaticAssetStore,
+  StaticAssetStoreProvider,
+} from "./contexts/static-asset-store-context";
 export { useCreateStaticAsset } from "./hooks/use-create-static-asset";
 export { useDeleteStaticAsset } from "./hooks/use-delete-static-asset";
 export { useGetStaticAsset } from "./hooks/use-get-static-asset";
