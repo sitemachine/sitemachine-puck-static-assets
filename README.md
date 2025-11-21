@@ -1,6 +1,6 @@
 # @sitemachine/puck-static-assets
 
-A plugin for [Puck](https://github.com/measured-co/puck) that adds support for managing static assets (images, files, etc.).
+A plugin for [Puck](https://github.com/puckeditor/puck) that adds support for managing static assets (images, files, etc.).
 
 ## Installation
 
